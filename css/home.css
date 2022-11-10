@@ -1,8 +1,9 @@
 :root {
     --blue: rgb(51, 106, 161);
+    --clearest-blue: rgb(112, 155, 199);
     --clearest-green: rgb(150, 196, 148);
     --clearest-orange: rgb(231, 150, 138);
-    --dark-blue: rgb(22, 53, 82);
+    --dark-blue: rgb(47, 74, 99);
     --dark-gray: rgb(52, 52, 52);
     --dark-orange: rgb(203, 67, 46);
     --gray: rgb(228, 228, 228);
@@ -193,4 +194,57 @@ li {
 
 .text__button:hover {
     background-color: var(--dark-orange);
+}
+
+.footer__section {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    margin-top: .5em;
+}
+
+.text__heading--footer {
+    margin: 8px 0 1em 0;
+}
+
+.footer__navegation {
+    display: flex;
+    width: 100%;
+}
+
+.navegation__division {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.navegation__title {
+    margin: 0 0 .25em 0;
+    border-left: .25em solid;
+    padding-left: .5em;
+}
+
+.navegation__title--backend {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.navegation__title--fronted {
+    color: var(--clearest-blue);
+    border-color: var(--clearest-blue);
+}
+
+.navegation__title--frameworks {
+    color: var(--violet);
+    border-color: var(--violet);
+}
+
+.navegation__title--databases {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.navegation__link {
+    line-height: 1.75em;
 }
