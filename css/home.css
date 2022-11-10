@@ -8,3 +8,61 @@
     --violet: rgb(173, 133, 191);
     --white: rgb(255, 255, 255);
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.body {
+    color: var(--dark-gray);
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 18px 0;
+}
+
+.header {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+}
+
+.header .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.navegation__link {
+    display: inline-block;
+}
+
+.header__navegation {
+    display: flex;
+}
+
+.header__navegation .navegation__link {
+    border-bottom: .075em solid transparent;
+    font-size: 16px;
+    margin-right: 1em;
+    padding: 8px;
+}
+
+.header__navegation .navegation__link:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.header__navegation .navegation__link:last-child {
+    margin-right: 0;
+}
