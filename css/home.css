@@ -1,5 +1,6 @@
 :root {
     --blue: rgb(51, 106, 161);
+    --clearest-green: rgb(103, 178, 99);
     --dark-blue: rgb(16, 33, 49);
     --dark-gray: rgb(52, 52, 52);
     --gray: rgb(228, 228, 228);
@@ -54,8 +55,11 @@ a {
 .header__navegation .navegation__link {
     border-bottom: .075em solid transparent;
     font-size: 16px;
-    margin-right: 1em;
-    padding: 8px;
+    padding: 8px 0;
+}
+
+.header__navegation .navegation__link:not(:last-child) {
+    margin-right: 2.5em;
 }
 
 .header__navegation .navegation__link:hover {
@@ -63,6 +67,62 @@ a {
     color: var(--blue);
 }
 
-.header__navegation .navegation__link:last-child {
-    margin-right: 0;
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.content__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.content__list .list__item {
+    align-items: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    box-shadow: 5px 5px 5px var(--gray);
+    display: flex;
+    font-weight: 600;
+    height: 180px;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+    width: calc(25% - 1em + 1em / 4);
+    transition: .6s ease;
+}
+
+.content__list .list__item:nth-child(2n - 1) {
+    background-image: url("../img/background1.svg");
+}
+
+.content__list .list__item:nth-child(2n) {
+    background-image: url("../img/background2.svg");
+}
+
+.content__list .list__item:not(:nth-child(4n)) {
+    margin-right: 1em;
+}
+
+.content__list .list__item:nth-child(2n - 1):hover {
+    box-shadow: 5px 5px 5px var(--clearest-green);
+    color: var(--clearest-green);
+}
+
+.content__list .list__item:nth-child(2n):hover {
+    box-shadow: 5px 5px 5px var(--orange);
+    color: var(--orange);
+}
+
+.content__list .list__link {
+    padding: 1em 1.5em;
 }
